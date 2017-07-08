@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/st', function () {
+    return view('standings');
 });
+
+Route::get('/add', function (){
+    return view('creation');
+})->name('/add');
+
+Route::get('/', 'StandingsController@showTournaments') -> name ('/');
+
+
+
+Route::post('create', 'StandingsController@create');
+
+
+
