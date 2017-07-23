@@ -51,8 +51,8 @@ class CreateTournamentTables extends Migration{
     public function down()
     {
         Schema::drop('games');
-        Schema::drop('teams');
         Schema::drop('tournament_team_points');
+        Schema::drop('teams');
         Schema::drop('tournaments');
     }
 
