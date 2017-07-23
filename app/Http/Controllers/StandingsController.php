@@ -19,7 +19,7 @@ class StandingsController extends Controller
         $sTournament = $request->input('tournament');
         //var_dump($sTournament);
         DB::table('tournaments')->insert([
-            ['title' => $sTournament]
+            ['tournament_name' => $sTournament]
         ]);
         return redirect()->route('/');
     }
